@@ -1,4 +1,10 @@
 {
     "name": "sa/portal",
-    "require": {}
+    "require": {},
+    "autoload":{
+    	"psr-4":{
+    		"engine\\":"engine",
+    		"engine\\di\\":"engine/di"
+    	}
+    }
 }

@@ -1,26 +1,23 @@
 <?php
-namespace Engine\Di;
+namespace engine\di;
 
-class Di{
+class di{
 	private $container = [];
 
 	public function set($key, $value)
 	{
 		$this->container[$key]=($value);
+
 	}
 	public function get($key)
 	{
-		var_dump($this);
+		return($this->has($key));
 	}
 	public function has($key)
 	{
-		return isset($this->container[$key]);
+		return isset($this->container[$key])? $this->container[$key]:null;
 	}
 }
 
-$a = new di();
-
-$a->set('key','val');
-echo $a->get('key');
 
 ?>
